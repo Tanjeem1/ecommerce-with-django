@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<style>
+    .btn-home {
+        border-radius: 0.75rem; /* Ensures rounded square shape */
+    }
+</style>
+<div class="max-w-6xl mx-auto flex flex-wrap items-start py-6 px-6 xl:px-0">
+    <div class="products w-full lg:w-3/4">
+        <h1 class="mb-5 text-3xl">Success</h1>
+
+        <p>Dear customer, Thanks for making the purchase from us. <br>
+            Contact with us if you face any trouble and we will gladly assist you.
+        </p>
+
+        <button 
+            onclick="window.location.href='{% url 'frontpage' %}'" 
+            class="mt-4 inline-block px-6 py-3 bg-black text-white rounded-xl btn-home hover:bg-gray-800"
+        >
+             Homepage
+        </button>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+
+{% extends 'core/base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<style>
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+    .lightbox .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+</style>
+<div class="max-w-6xl mx-auto flex flex-wrap py-6 px-6 xl:px-0">
+    <div class="images w-full mb-6 lg:mb-0 lg:w-3/5">
+        <div class="flex flex-wrap gap-4">
+            {% if product.image %}
+                <img class="rounded-xl w-full md:w-1/2 cursor-pointer" src="{{ product.image.url }}" alt="{{ product.name }}" onclick="openLightbox('{{ product.image.url }}')">
+            {% endif %}
+            {% for image in product.images.all %}
+                <img class="rounded-xl w-full md:w-1/2 cursor-pointer" src="{{ image.image.url }}" alt="{{ product.name }}" onclick="openLightbox('{{ image.image.url }}')">
+            {% endfor %}
+            {% if not product.image and not product.images.all %}
+                <img class="rounded-xl w-full md:w-1/2" src="https://via.placeholder.com/240x240x.jpg" alt="{{ product.name }}">
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="information w-full lg:w-2/5 lg:p-6">
+        <h1 class="text-2xl">{{ product.name }}</h1>
+        <p class="mt-1 text-gray-400">${{ product.get_display_price }}</p>
+        {% if product.get_rating > 0 %}
+            <p class="mt-1 text-gray-400">Rating: {{ product.get_rating }} / 5</p>
+        {% endif %}
+        {% if product.description %}
+            <p class="mt-6 text-gray-700">{{ product.description }}</p>
+        {% endif %}
+        <a 
+            href="#" 
+            class="mt-6 inline-block px-8 py-4 rounded-xl bg-purple-500 text-white hover:bg-purple-700"
+            hx-get="{% url 'add_to_cart' product.id %}"
+            hx-target="#menu-cart-button"
+            hx-swap="outerHTML"
+        >
+            Add to cart
+        </a>
+    </div>
+
+    <div class="w-full mt-6">
+        <h2 class="text-xl">Reviews</h2>
+        {% if request.user.is_authenticated %}
+            <form method="post" action="." class="mt-6 mb-6 p-6 bg-gray-100 rounded-xl">
+                {% csrf_token %}
+                <div>
+                    <label>Rating</label><br>
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Comment</label><br>
+                    <textarea name="content"></textarea>
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        {% endif %}
+        {% for review in product.reviews.all %}
+            <div class="px-4 py-6 bg-gray-100 rounded-xl mb-4">
+                <strong>Rating:</strong> {{ review.rating }}/5<br>
+                <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }}<br>
+                <strong>Comment: </strong> {{ review.content }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Large image">
+</div>
+
+<script>
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        img.src = src;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox(event) {
+        if (event.target.classList.contains('lightbox') || event.target.classList.contains('close')) {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    }
+</script>
+{% endblock %}
