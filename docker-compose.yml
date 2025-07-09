@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .  # Current directory
+      dockerfile: Dockerfile  # Points to the Dockerfile
+    image: django_ecommerce_image
+    container_name: django_ecommerce_container
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8001:8000"

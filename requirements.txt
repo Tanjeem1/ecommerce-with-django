@@ -12,3 +12,8 @@
  typing-extensions==4.14.0
  tzdata==2025.2
  urllib3==2.5.0
+ psycopg2-binary==2.9.10 #need this for postgres if used in the setting as daTABASE
+ dj-database-url==3.0.0 #need this for postgres if used in the setting as daTABASE
+ pymysql #need this for mysql if used in the setting as daTABASE
+ 
+ 

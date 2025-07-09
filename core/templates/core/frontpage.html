@@ -1,16 +1,13 @@
-
 {% extends 'core/base.html' %}
 
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-<header class="px-6 py-10 lg:py-20 bg-gray-900">
-    <div class="max-w-3xl mx-auto text-center">
-        <p class="mb-2 text-3xl lg:text-5xl text-white">Welcome to our page</p>
-
-        <p class="mb-10 text-white">We sell furnitues for the modern home</p>
-
-    <a href="{% url 'shop' %}" class="inline-block px-8 py-4 rounded-xl bg-white text-dark hover:bg-gray-200">Start shopping</a>
+<header class="px-6 py-10 lg:py-80 bg-cover bg-center" style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/images1/Download-free-Floor-Photos.jpg');">
+    <div class="max-w-3xl mx-auto text-center bg-opacity-100 p-2">
+        <p class="mb-2 text-2xl lg:text-5xl text-gray-900">Welcome to Furniture Zone</p>
+        <p class="mb-10  text-gray-900">We sell furniture for the modern home</p>
+        <a href="{% url 'shop' %}" class="inline-block px-6 py-4 rounded-xl bg-gray-200 text-gray-900 hover:bg-gray-300">Start shopping</a>
     </div>
 </header>
 

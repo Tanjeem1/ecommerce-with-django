@@ -14,7 +14,7 @@ def custom_logout(request):
     return redirect('frontpage')  # Redirect to the frontpage after logout
 
 def frontpage(request):
-    products = Product.objects.all()[0:8]
+    products = Product.objects.all()[:4]
 
     return render(request, 'core/frontpage.html', {'products': products})
 
