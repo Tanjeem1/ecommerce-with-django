@@ -36,22 +36,33 @@ This is a Django-based e-commerce application utilizing modern web technologies 
 docker-compose up --build
 
 Access the host application at http://localhost:8000
+
 Access the dockerize application at http://localhost:8001
 
 ## Must need to have a stripe account for testing the transiction
 
 
-## Project Structurevenv 
-.env/: Virtual environment
-.furniture/: Main app directory
-.cart/, core/, media/, order/, product/: App modules
-.dockerignore: Docker ignore file
-.db.sqlite3: SQLite database
-.docker-compose.yml: Docker Compose configuration
-.Dockerfile: Docker configuration
-.manage.py: Django management script
-.requirements.txt: Python dependencies
-.info.txt: Additional project info
+## Project Structurevenv
+
+env/: Virtual environment
+
+furniture/: Main app directory
+
+cart/, core/, media/, order/, product/: App modules
+
+dockerignore: Docker ignore file
+
+db.sqlite3: SQLite database
+
+docker-compose.yml: Docker Compose configuration
+
+Dockerfile: Docker configuration
+
+manage.py: Django management script
+
+requirements.txt: Python dependencies
+
+info.txt: Additional project info
 
 
 
