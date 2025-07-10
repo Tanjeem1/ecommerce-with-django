@@ -1,7 +1,6 @@
 # Ecommerce-with-django
 
 
-
 ## Overview
 This is a Django-based e-commerce application utilizing modern web technologies and containerization. It integrates HTMX for dynamic HTML, CSS for styling, Stripe for payment processing, and Docker for container management.
 
@@ -24,6 +23,7 @@ This is a Django-based e-commerce application utilizing modern web technologies 
 - Docker
 - Docker Compose
 - Python 3.x
+-stripe account
 
 ## Installation
 1. Clone the repository:
@@ -36,6 +36,15 @@ This is a Django-based e-commerce application utilizing modern web technologies 
 docker-compose up --build
 
 Access the host application at http://localhost:8000
+
+
+## Build and start locally:bash
+
+cd furniture
+
+install requiments.txt file
+
+run manage.py command
 
 Access the dockerize application at http://localhost:8001
 
