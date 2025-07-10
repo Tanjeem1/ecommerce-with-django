@@ -35,7 +35,7 @@ This is a Django-based e-commerce application utilizing modern web technologies 
 
 docker-compose up --build
 
-Access the host application at http://localhost:8000
+Access the host application at http://localhost:8001
 
 
 ## Build and start locally:bash
@@ -46,7 +46,7 @@ install requiments.txt file
 
 run manage.py command
 
-Access the dockerize application at http://localhost:8001
+Access the dockerize application at http://localhost:8000
 
 ## Must need to have a stripe account for testing the transiction
 
