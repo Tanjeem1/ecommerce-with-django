@@ -39,7 +39,7 @@ CART_SESSION_ID = 'cart'
 
 
 STRIPE_API_KEY_PUBLISHABLE = 'pk_test_51QzwTZRuwT74UPJhhypyNOLhMV1mDCqfZGXx0wwqEm6unMlysoKo6NRA3BhqocnduW8nNluSYlRWm5KIQePotJps00IClh8oTy'
-STRIPE_API_KEY_HIDDEN= 'sk_test_51QzwTZRuwT74UPJhZGCLNt5sQvBNUoiURo4qyg5iCkzSMVhyaECGhWtr22Iu7PaUqoENbdsJB9Qc3kVWCPBzCwU400e9EYmWGW'    
+#STRIPE_API_KEY_HIDDEN= 'sk_test_51QzwTZRuwT74UPJhZGCLNt5sQvBNUoiURo4qyg5iCkzSMVhyaECGhWtr22Iu7PaUqoENbdsJB9Qc3kVWCPBzCwU400e9EYmWGW'    
 
 
 # Application definition
@@ -134,7 +134,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
