@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,7 +42,7 @@ CART_SESSION_ID = 'cart'
 
 STRIPE_API_KEY_PUBLISHABLE = 'pk_test_51QzwTZRuwT74UPJhhypyNOLhMV1mDCqfZGXx0wwqEm6unMlysoKo6NRA3BhqocnduW8nNluSYlRWm5KIQePotJps00IClh8oTy'
 #STRIPE_API_KEY_HIDDEN= 'sk_test_51QzwTZRuwT74UPJhZGCLNt5sQvBNUoiURo4qyg5iCkzSMVhyaECGhWtr22Iu7PaUqoENbdsJB9Qc3kVWCPBzCwU400e9EYmWGW'    
-
+STRIPE_TEST_KEY = os.getenv('STRIPE_TEST_KEY', '')
 
 # Application definition
 
