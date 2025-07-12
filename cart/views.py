@@ -18,6 +18,9 @@ def cart(request):
 def success(request):
     return render(request, 'cart/success.html')
 
+def cancle(request):
+    return render(request, 'cart/cancle.html')
+
 def update_cart(request, product_id, action):
     cart = Cart(request)
 
