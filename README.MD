@@ -1,8 +1,18 @@
 # Ecommerce-with-django
 
+1) Here is the Live link of the video:  https://tanjeemhridoy124.pythonanywhere.com/
+
+2) Here is the demo output video of the project: https://www.youtube.com/watch?v=V3ehFkpH0hA
+
+3) Here is the demo vide of the source code of the project: https://www.youtube.com/watch?v=kqp8KAPEGK8
+
+
+
 
 ## Overview
 This is a Django-based e-commerce application utilizing modern web technologies and containerization. It integrates HTMX for dynamic HTML, CSS for styling, Stripe for payment processing, and Docker for container management.
+
+
 
 ## Features
 - Product catalog management
