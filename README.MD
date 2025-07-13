@@ -6,6 +6,8 @@
 ## Overview
 This is a Django-based e-commerce application utilizing modern web technologies and containerization. It integrates HTMX for dynamic HTML, CSS for styling, Stripe for payment processing, and Docker for container management.
 
+
+
 ## Features
 - Product catalog management
 - Shopping cart functionality
