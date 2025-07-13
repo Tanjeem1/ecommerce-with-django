@@ -1,6 +1,6 @@
 # Ecommerce-with-django
 
- "Welcome _ Furniture Zone - Personal - Microsoft​ Edge 2025-07-13 21-44-35.mp4" -->
+
 
 
 ## Overview
