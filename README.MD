@@ -1,5 +1,7 @@
 # Ecommerce-with-django
 
+ "Welcome _ Furniture Zone - Personal - Microsoft​ Edge 2025-07-13 21-44-35.mp4" -->
+
 
 ## Overview
 This is a Django-based e-commerce application utilizing modern web technologies and containerization. It integrates HTMX for dynamic HTML, CSS for styling, Stripe for payment processing, and Docker for container management.
