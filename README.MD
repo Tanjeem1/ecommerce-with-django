@@ -1,5 +1,9 @@
 # Ecommerce-with-django
 
+Here is the Live link of the video:  https://tanjeemhridoy124.pythonanywhere.com/
+Here is the demo output video of the project: https://www.youtube.com/watch?v=V3ehFkpH0hA
+Here is the demo vide of the source code of the project: https://www.youtube.com/watch?v=kqp8KAPEGK8
+
 
 
 
