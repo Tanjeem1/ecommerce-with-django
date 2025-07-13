@@ -157,14 +157,8 @@
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(session => {
-             if (session.error) {
-                    window.location.href = '/cart/cancel/';
-           } else {
-                    stripe.redirectToCheckout({ sessionId: session.session.id });
-                   }
-})
-.catch(error => console.log('Errors', error));
+        .then(session => stripe.redirectToCheckout({ sessionId: session.session.id }))
+        .catch(error => console.log('Errors', error));
     }
 </script>
 

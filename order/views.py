@@ -29,14 +29,12 @@ def start_order(request):
             items.append(obj)
         
         stripe.api_key = settings.STRIPE_API_KEY_HIDDEN
-        if not stripe.api_key:
-            return JsonResponse({'error': 'Stripe API key not configured'}, status=400)
         session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=items,
             mode='payment',
             success_url='http://127.0.0.1:8000/cart/success/',
-            cancel_url='http://127.0.0.1:8000/cart/cancel'
+            cancel_url='http://127.0.0.1:8000/cart/'
         )
         payment_intent = session.payment_intent
 
