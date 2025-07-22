@@ -4,7 +4,7 @@
 
 2) Here is the demo output video of the project: https://www.youtube.com/watch?v=V3ehFkpH0hA
 
-3) Here is the demo vide of the source code of the project: https://www.youtube.com/watch?v=kqp8KAPEGK8
+3) Here is the demo video of the source code of the project: https://www.youtube.com/watch?v=kqp8KAPEGK8
 
 
 
@@ -48,7 +48,7 @@ docker-compose up --build
 Access the dockerize application at http://localhost:8001
 
 
-## Build and start locally:bash
+## Build and start locally:powershell
 
 cd furniture
 
